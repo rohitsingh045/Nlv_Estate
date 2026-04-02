@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Rohit Singh",
     role: "Homeowner, Skyline Residences",
     text: "NLV made our dream home a reality. The attention to detail and quality of construction is unmatched. We couldn't be happier with our new home.",
     rating: 5,
   },
   {
-    name: "Rajesh Mehta",
+    name: "Priya Sharma",
     role: "Investor, Palm Vista",
     text: "Exceptional ROI and world-class amenities. NLV's properties are a benchmark in luxury real estate. Highly recommend for serious investors.",
     rating: 5,
   },
   {
-    name: "Anita Desai",
+    name: "Anamika Tiwari",
     role: "Homeowner, The Grand Penthouse",
     text: "From the first visit to handing over the keys, NLV's team was professional and caring. The penthouse exceeded all our expectations.",
     rating: 5,

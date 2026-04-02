@@ -44,7 +44,7 @@ const HeroSection = () => {
       </div>
 
       {/* Pause / Play Button - Centered */}
-      <button
+      {/* <button
         onClick={toggleVideo}
         aria-label={isPlaying ? "Pause video" : "Play video"}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-1 transition-all hover:scale-110"
@@ -59,7 +59,7 @@ const HeroSection = () => {
             <Play size={28} className="text-primary-foreground ml-0.5" />
           )}
         </div>
-      </button>
+      </button> */}
 
       {/* Content */}
       <div className="relative container mx-auto px-6 pt-24 pb-12">

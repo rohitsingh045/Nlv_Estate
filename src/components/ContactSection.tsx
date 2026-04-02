@@ -34,9 +34,9 @@ const ContactSection = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "" },
+                { icon: Phone, label: "8797266152" },
                 { icon: Mail, label: "hello@nlvrealty.com" },
-                { icon: MapPin, label: "Kankar bhag Doctor Colony , Patna (Bihar)" },
+                { icon: MapPin, label: "Kankarbagh Doctor Colony , Patna (Bihar)" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
