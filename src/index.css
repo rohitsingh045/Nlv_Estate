@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 145 30% 12%;
+
+    --card: 40 20% 95%;
+    --card-foreground: 160 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 12%;
+
+    --primary: 145 55% 40%;
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 38 40% 90%;
+    --secondary-foreground: 160 30% 12%;
+
+    --muted: 40 15% 92%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 145 55% 40%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 145 55% 40%;
+
+    --radius: 0.75rem;
+
+    --gold: 145 55% 40%;
+    --gold-light: 145 45% 55%;
+    --cream: 40 33% 97%;
+    --cream-dark: 38 25% 90%;
+    --forest: 145 55% 40%;
+    --forest-light: 145 45% 50%;
+    --charcoal: 145 20% 15%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(145 55% 40%), hsl(145 45% 55%));
+    --gradient-forest: linear-gradient(135deg, hsl(145 55% 40%), hsl(145 45% 50%));
+    --gradient-cream: linear-gradient(180deg, hsl(40 33% 97%), hsl(38 25% 92%));
+    --shadow-luxury: 0 20px 60px -15px hsl(145 55% 40% / 0.12);
+    --shadow-card: 0 4px 24px -4px hsl(145 55% 40% / 0.08);
+    --shadow-gold: 0 8px 32px -8px hsl(145 55% 40% / 0.3);
+
+    --glass-bg: hsl(0 0% 100% / 0.7);
+    --glass-border: hsl(0 0% 100% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  .gradient-forest {
+    background: var(--gradient-forest);
+  }
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+  .bg-forest {
+    background-color: hsl(var(--forest));
+  }
+  .text-forest {
+    color: hsl(var(--forest));
+  }
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
