@@ -13,7 +13,7 @@ const Footer = () => (
         {[
           { title: "Quick Links", links: ["Properties", "About Us", "Testimonials", "Contact"] },
           { title: "Property Types", links: ["Apartments", "Villas", "Penthouses", "Plots"] },
-          { title: "Cities", links: ["Gurugram", "Mumbai", "Bangalore", "Hyderabad"] },
+          // { title: "Cities", links: ["Gurugram", "Mumbai", "Bangalore", "Hyderabad"] },
         ].map((col) => (
           <div key={col.title}>
             <h4 className="font-serif text-primary-foreground font-semibold mb-4">{col.title}</h4>

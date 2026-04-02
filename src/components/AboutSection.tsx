@@ -21,10 +21,10 @@ const AboutSection = () => (
           <p className="text-accent font-sans text-sm font-semibold tracking-[0.25em] uppercase mb-3">
             About Us
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+          {/* <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
             Building Dreams{" "}
             <span className="text-gold italic">Since 2008</span>
-          </h2>
+          </h2> */}
           <p className="text-muted-foreground font-sans text-lg leading-relaxed mb-6">
             NLV is a premier real estate company dedicated to creating extraordinary living experiences. With over 18 years of expertise, we've transformed skylines and built communities that stand the test of time.
           </p>

@@ -44,11 +44,11 @@ const ChairmanSection = () => {
           <div className="border-t border-accent-foreground/20 pt-6">
             <p className="text-accent-foreground font-serif font-bold text-lg">Mr Lokesh Kumar</p>
             <p className="text-accent-foreground/70 font-sans text-sm">
-              Founder & Chairman, NLV Realty Pvt. Ltd.
+              Founder & Chairman, NLV Group.
             </p>
-            <a href="tel:+916200488170" className="text-accent-foreground/70 font-sans text-sm mt-1 inline-block hover:text-accent-foreground transition-colors">
+            {/* <a href="tel:+916200488170" className="text-accent-foreground/70 font-sans text-sm mt-1 inline-block hover:text-accent-foreground transition-colors">
               +91 62004 88170
-            </a>
+            </a> */}
           </div>
         </motion.div>
       </div>

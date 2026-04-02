@@ -8,8 +8,8 @@ const properties = [
   {
     image: property1,
     title: "Skyline Residences",
-    location: "Sector 63, Gurugram",
-    price: "₹1.2 Cr",
+    // location: "Sector 63, Gurugram",
+    // price: "₹1.2 Cr",
     beds: 3,
     baths: 2,
     area: "1,850 sq.ft",
@@ -18,8 +18,8 @@ const properties = [
   {
     image: property2,
     title: "Palm Vista Villa",
-    location: "Whitefield, Bangalore",
-    price: "₹3.5 Cr",
+    // location: "Whitefield, Bangalore",
+    // price: "₹3.5 Cr",
     beds: 4,
     baths: 3,
     area: "3,200 sq.ft",
@@ -28,8 +28,8 @@ const properties = [
   {
     image: property3,
     title: "The Grand Penthouse",
-    location: "BKC, Mumbai",
-    price: "₹8.9 Cr",
+    // location: "BKC, Mumbai",
+    // price: "₹8.9 Cr",
     beds: 5,
     baths: 4,
     area: "5,500 sq.ft",

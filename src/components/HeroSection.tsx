@@ -5,9 +5,9 @@ import heroImg from "@/assets/hero-building.jpg";
 import heroVideoAsset from "@/assets/hero-video-long.mp4.asset.json";
 
 const stats = [
-  { value: "150+", label: "Projects Delivered" },
-  { value: "5000+", label: "Happy Clients" },
-  { value: "18+", label: "Years Experience" },
+  { value: "upcoming+", label: "Projects Delivered" },
+  { value: "+", label: "Happy Clients" },
+  { value: "8+", label: "Years Experience" },
 ];
 
 const HeroSection = () => {

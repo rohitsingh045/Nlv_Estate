@@ -34,9 +34,9 @@ const ContactSection = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "+91 98765 43210" },
+                { icon: Phone, label: "" },
                 { icon: Mail, label: "hello@nlvrealty.com" },
-                { icon: MapPin, label: "Tower A, Business Park, Gurugram, India" },
+                { icon: MapPin, label: "Kankar bhag Doctor Colony , Patna (Bihar)" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
@@ -57,9 +57,9 @@ const ContactSection = () => {
             className="bg-popover rounded-2xl p-8 shadow-luxury space-y-5"
           >
             {[
-              { name: "name" as const, label: "Full Name", type: "text", placeholder: "John Doe" },
-              { name: "email" as const, label: "Email", type: "email", placeholder: "john@example.com" },
-              { name: "phone" as const, label: "Phone", type: "tel", placeholder: "+91 98765 43210" },
+              { name: "name" as const, label: "Full Name", type: "text", placeholder: "Your name" },
+              { name: "email" as const, label: "Email", type: "email", placeholder: "youremail@example.com" },
+              { name: "phone" as const, label: "Phone", type: "tel", placeholder: "+91 0000000000" },
             ].map((field) => (
               <div key={field.name}>
                 <label className="text-sm font-sans font-medium text-foreground mb-1.5 block">{field.label}</label>

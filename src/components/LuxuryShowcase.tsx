@@ -74,19 +74,19 @@ const projects = [
   {
     image: luxury1,
     name: "NLV Skyline Tower",
-    location: "Sector 84, Gurugram",
+    // location: "Sector 84, Gurugram",
     config: "3 BHK · 3.5 BHK · 4.5 BHK",
   },
   {
     image: luxury2,
     name: "NLV Twin Residences",
-    location: "Sector 63, Gurugram",
+    // location: "Sector 63, Gurugram",
     config: "2.5 BHK · 3 BHK · 4 BHK",
   },
   {
     image: luxury3,
     name: "NLV Grand Villas",
-    location: "Whitefield, Bangalore",
+    // location: "Whitefield, Bangalore",
     config: "4 BHK · 5 BHK · Penthouse",
   },
 ];
