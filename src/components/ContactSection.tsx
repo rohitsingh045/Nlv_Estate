@@ -1,14 +1,47 @@
 import { Send, Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you! We'll get back to you shortly.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you! We'll get back to you shortly.",
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Submission Failed",
+          description: "Something went wrong. Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast({
+        variant: "destructive",
+        title: "Error Connecting",
+        description: "Failed to connect to the server.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -85,9 +118,16 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-accent text-accent-foreground py-4 rounded-xl font-sans font-bold flex items-center justify-center gap-2 shadow-gold transition-all hover:scale-[1.02]"
+              disabled={isSubmitting}
+              className="w-full bg-accent text-accent-foreground py-4 rounded-xl font-sans font-bold flex items-center justify-center gap-2 shadow-gold transition-all hover:scale-[1.02] disabled:opacity-75 disabled:cursor-not-allowed"
             >
-              <Send size={18} /> Send Enquiry
+              {isSubmitting ? (
+                <span>Sending...</span>
+              ) : (
+                <>
+                  <Send size={18} /> Send Enquiry
+                </>
+              )}
             </button>
           </motion.form>
         </div>
