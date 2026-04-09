@@ -17,7 +17,13 @@ mongoose
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://nlv-estate.vercel.app", "http://localhost:8080", "http://localhost:5173", "http://localhost:5000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 // Routes
 app.use("/api/contact", contactRoutes);

@@ -66,7 +66,7 @@ const AdminDashboard = () => {
 
       if (!response.ok) throw new Error("Failed to delete inquiry");
 
-      setInquiries(inquiries.filter(inq => inq.id !== id));
+      setInquiries(inquiries.filter(inq => inq._id !== id));
       setStats((prev: any) => ({ ...prev, recentInquiries: Math.max(0, (prev?.recentInquiries || 1) - 1) }));
       
       toast({ title: "Deleted", description: "Inquiry deleted successfully", variant: "default" });

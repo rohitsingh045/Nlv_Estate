@@ -1,6 +1,6 @@
 const Inquiry = require("../models/Inquiry");
 
-const submitInquiry = (req, res) => {
+const submitInquiry = async (req, res) => {
   try {
     const { name, email, phone, message } = req.body;
     
@@ -8,7 +8,7 @@ const submitInquiry = (req, res) => {
       return res.status(400).json({ error: "Name, Email, and Phone are required." });
     }
 
-    const newInquiry = Inquiry.create({ name, email, phone, message });
+    const newInquiry = await Inquiry.create({ name, email, phone, message });
     res.status(201).json({ message: "Inquiry saved successfully", inquiry: newInquiry });
   } catch (error) {
     console.error("Error submitting inquiry:", error);
