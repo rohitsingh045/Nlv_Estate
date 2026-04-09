@@ -20,7 +20,7 @@ const AdminSignup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/admin/signup", {
+      const response = await fetch("/api/admin/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -79,7 +79,7 @@ const AdminSignup = () => {
             Sign Up
           </Button>
           <div className="text-center mt-4">
-            <Link to="/admin/login" className="text-sm text-gold hover:underline">
+            <Link to="/admin-login-8472" className="text-sm text-gold hover:underline">
               Already have an account? Login here.
             </Link>
           </div>

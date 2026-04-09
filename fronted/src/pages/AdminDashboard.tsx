@@ -17,16 +17,16 @@ const AdminDashboard = () => {
     const verifyToken = async () => {
       const token = localStorage.getItem("adminToken");
       if (!token) {
-        navigate("/admin/login");
+        navigate("/admin-login-8472");
         return;
       }
 
       try {
         const [statsResponse, inquiriesResponse] = await Promise.all([
-          fetch("http://localhost:5000/api/admin/dashboard-stats", {
+          fetch("/api/admin/dashboard-stats", {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          fetch("http://localhost:5000/api/admin/inquiries", {
+          fetch("/api/admin/inquiries", {
             headers: { Authorization: `Bearer ${token}` }
           })
         ]);
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
         setInquiries(inquiriesData);
       } catch (err) {
         localStorage.removeItem("adminToken");
-        navigate("/admin/login");
+        navigate("/admin-login-8472");
       } finally {
         setLoading(false);
       }
@@ -53,13 +53,13 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("adminToken");
-    navigate("/admin/login");
+    navigate("/admin-login-8472");
   };
 
   const handleDeleteInquiry = async (id: string) => {
     try {
       const token = localStorage.getItem("adminToken");
-      const response = await fetch(`http://localhost:5000/api/admin/inquiries/${id}`, {
+      const response = await fetch(`/api/admin/inquiries/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });

@@ -14,7 +14,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/admin/login", {
+      const response = await fetch("/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -63,7 +63,7 @@ const AdminLogin = () => {
             Login
           </Button>
           <div className="text-center mt-4">
-            <Link to="/admin/signup" className="text-sm text-gold hover:underline">
+            <Link to="/admin-signup-hidden-xy" className="text-sm text-gold hover:underline">
               Don't have an account? Sign up here.
             </Link>
           </div>

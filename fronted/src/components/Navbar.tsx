@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -49,12 +50,6 @@ const Navbar = () => {
           >
             Book a Visit
           </a>
-          <Link
-            to="/admin/login"
-            className="border border-accent text-accent px-5 py-2.5 rounded-lg text-sm font-semibold font-sans shadow-gold transition-transform hover:scale-105 hover:bg-accent hover:text-accent-foreground"
-          >
-            Login
-          </Link>
         </div>
 
         <button
@@ -90,12 +85,6 @@ const Navbar = () => {
               >
                 Book a Visit
               </a>
-              <Link
-                to="/admin/login"
-                className="border border-accent text-accent px-5 py-3 rounded-lg text-center font-semibold font-sans shadow-gold"
-              >
-                Login
-              </Link>
             </div>
           </motion.div>
         )}

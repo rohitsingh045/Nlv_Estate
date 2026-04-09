@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://nlv-estate-i1uj.vercel.app/api/:path*"
+    }
+  ]
+}
