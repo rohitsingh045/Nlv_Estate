@@ -171,7 +171,7 @@ const AdminDashboard = () => {
                 {inquiries && inquiries.length > 0 ? (
                   <div className="space-y-4">
                     {inquiries.map((inq: any) => (
-                      <div key={inq.id} className="p-6 border border-slate-700/50 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors">
+                        <div key={inq._id} className="p-6 border border-slate-700/50 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors">
                         <div className="flex justify-between items-start mb-2">
                           <div>
                             <h4 className="font-bold text-lg text-white mb-1">{inq.name}</h4>
@@ -184,7 +184,7 @@ const AdminDashboard = () => {
                               {new Date(inq.date).toLocaleString()}
                             </span>
                             <Button 
-                              onClick={() => handleDeleteInquiry(inq.id)} 
+                                onClick={() => handleDeleteInquiry(inq._id)} 
                               variant="destructive" 
                               size="sm"
                               className="h-8 shadow-sm hover:bg-red-600 transition-colors"
