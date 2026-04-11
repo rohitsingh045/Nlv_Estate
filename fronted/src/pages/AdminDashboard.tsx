@@ -96,13 +96,22 @@ const AdminDashboard = () => {
         {/* Top Navbar */}
         <header className="flex justify-between items-center p-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm">
           <h2 className="text-xl font-medium tracking-wide">Dashboard Overview</h2>
-          <Button 
-            onClick={handleLogout} 
-            variant="outline" 
-            className="bg-transparent border-slate-700 text-slate-300 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/50 gap-2 transition-colors"
-          >
-            <LogOut size={16} /> Logout
-          </Button>
+          <div className="flex gap-4">
+            <Button
+              onClick={() => navigate("/")}
+              variant="outline"
+              className="bg-emerald-500/10 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 transition-colors"
+            >
+              Go to Home
+            </Button>
+            <Button 
+              onClick={handleLogout} 
+              variant="outline" 
+              className="bg-transparent border-slate-700 text-slate-300 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/50 gap-2 transition-colors"
+            >
+              <LogOut size={16} /> Logout
+            </Button>
+          </div>
         </header>
 
         <main className="flex-1 p-6 md:p-8 overflow-y-auto bg-slate-950">
